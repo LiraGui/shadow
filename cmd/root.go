@@ -16,10 +16,13 @@ import (
 var rootCmd = &cobra.Command{
 	Use:   "shadow",
 	Short: "Shadow CLI",
-	Long: `Shadow is a CLI tool to help you with Kubernetes cluster commands and cluster contexts`,
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
-	// Run: func(cmd *cobra.Command, args []string) { },
+	Long: `
+ ____  _   _    _    ____   _____        __   ____ _     ___ 
+/ ___|| | | |  / \  |  _ \ / _ \ \      / /  / ___| |   |_ _|
+\___ \| |_| | / _ \ | | | | | | \ \ /\ / /  | |   | |    | | 
+ ___) |  _  |/ ___ \| |_| | |_| |\ V  V /   | |___| |___ | | 
+|____/|_| |_/_/   \_|____/ \___/  \_/\_/     \____|_____|___|
+	`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
