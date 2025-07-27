@@ -22,7 +22,7 @@ var rootCmd = &cobra.Command{
 \___ \| |_| | / _ \ | | | | | | \ \ /\ / /  | |   | |    | | 
  ___) |  _  |/ ___ \| |_| | |_| |\ V  V /   | |___| |___ | | 
 |____/|_| |_/_/   \_|____/ \___/  \_/\_/     \____|_____|___|
-	`,
+`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.

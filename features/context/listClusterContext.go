@@ -2,38 +2,25 @@
 Copyright © 2025 LiraGui <liraguilherme252@gmail.com>
 
 */
-package cmd
+package context
 
 import (
 	"fmt"
 	"os/exec"
 	"strings"
+
 	"github.com/spf13/cobra"
 )
 
-// NOTE: listClusterContextCmd represents the list-cluster-context command
-var listClusterContextCmd = &cobra.Command{
-	Use:     "list-cluster-context",
-	Aliases: []string{"lcc"},
+// ListClusterContextCmd represents the list command
+var ListClusterContextCmd = &cobra.Command{
+	Use:     "list",
+	Aliases: []string{"ls"},
 	Short:   "List Kubernetes cluster context",
 	Long:    "List Kubernetes cluster context",
 	Run: func(cmd *cobra.Command, args []string) {
 		igniteListClusterContext()
 	},
-}
-
-func init() {
-	rootCmd.AddCommand(listClusterContextCmd)
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// listClusterContextCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// listClusterContextCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
 // NOTE: igniteListClusterContext is the function that is called when the list-cluster-context command is executed

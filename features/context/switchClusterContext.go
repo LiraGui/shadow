@@ -2,19 +2,20 @@
 Copyright © 2025 LiraGui <liraguilherme252@gmail.com>
 
 */
-package cmd
+package context
 
 import (
 	"fmt"
 	"os/exec"
 	"strings"
+
 	"github.com/spf13/cobra"
 )
 
-// switchClusterContextCmd represents the switchClusterContext command
-var switchClusterContextCmd = &cobra.Command{
-	Use:     "switch-cluster-context",
-	Aliases: []string{"sc	c"},
+// SwitchClusterContextCmd represents the switch command
+var SwitchClusterContextCmd = &cobra.Command{
+	Use:     "switch",
+	Aliases: []string{"sw"},
 	Short:   "Switch Kubernetes cluster context",
 	Long:    "Switch Kubernetes cluster context",
 	Run: func(cmd *cobra.Command, args []string) {
@@ -22,27 +23,13 @@ var switchClusterContextCmd = &cobra.Command{
 	},
 }
 
-func init() {
-	rootCmd.AddCommand(switchClusterContextCmd)
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// switchClusterContextCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// switchClusterContextCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-}
-
-// NOTE: ignite is the function that is called when the switch-cluster-context command is executed
+// NOTE: ignite is the function that is called when the switch command is executed
 func ignite() {
 	fmt.Println("Select the cluster context:\n")
 	SwitchClusterContext()
 }
 
-// NOTE: SwitchClusterContext is the function that is called when the switch-cluster-context command is executed
+// NOTE: SwitchClusterContext is the function that is called when the switch command is executed
 func SwitchClusterContext() {
 	// NOTE: Get the list of available cluster contexts
 	clusterContexts := ListClusterContext()
